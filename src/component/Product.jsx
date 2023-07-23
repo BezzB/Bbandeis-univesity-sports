@@ -46,7 +46,8 @@ export const Product = () => {
     const ShowProduct =()=>{
         return(
             <>
-            <div className="col-md-6">
+            <div className="container">
+              <div className="col-md-6">
                 <img src= {product.image} alt={product.title}
                 height="400px" width="400px" />
              </div>
@@ -68,7 +69,9 @@ export const Product = () => {
                 </p>
                 <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)}> Add to Cart </button>
                 <NavLink to= "/cart" className="btn btn-dark ms-2 px-3 py-2"> Go to Cart </NavLink>
-             </div>
+             </div>  
+            </div>
+            
 
             </>
         )
