@@ -16,7 +16,7 @@ const Navbar = () => {
       data-bs-theme="dark"
     >
       <div className="container-fluid">
-        <Link className="navbar-brand fw-bold fs-4" to="/">
+        <Link className="navbar-brand fw-bold fs-4" to="/home">
           <img src="hairlogo.PNG" alt="Trendiz-Hair" width="300" height="40"/>
         </Link>
         <button
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav mx-auto mb-3 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link active" aria-current="page" to="/home">
                 Home
               </Link>
             </li>
