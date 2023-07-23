@@ -1,51 +1,76 @@
-import React from "react";
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import { AiOutlineLogin } from 'react-icons/ai';
+import { FcGoogle } from 'react-icons/fc';
 
-const Login = () => {
+
+function Login() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const handleLogin = () => {
+    // Add your login logic here
+    // For demo purposes, just closing the modal after clicking "Login"
+    handleClose();
+  };
+
   return (
     <>
-      <button
-        type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
-        Launch demo modal
-      </button>
+      <Button variant="outline-light mx-1" onClick={handleShow}>
+        <AiOutlineLogin /> Login
+      </Button>
 
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Modal title
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Login</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Button variant="primary w-100 mb-2">
+        <FcGoogle style={{ marginRight: '8px' }} />
+      Sign in with Google
+    </Button>
+          <Form>          
+           
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                // value={email}
+                // onChange={(e) => setEmail(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                // value={password}
+                // onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Text id="passwordHelpBlock" muted>
+              Your password must be 8-20 characters long, contain letters and numbers,
+              and must not contain spaces, special characters, or emoji.
+            </Form.Text>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleLogin}>
+            Login
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
-};
+}
 
 export default Login;

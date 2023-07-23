@@ -1,9 +1,11 @@
 import React from "react";
-import { AiOutlineLogin } from "react-icons/ai";
 import { BiSolidCart } from "react-icons/bi";
-import { PiSignInBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
-import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import Login from "./buttons/Login";
+import Register from "./buttons/Register";
+
+
 
 const Navbar = () => {
   const state = useSelector((state)=>state.handleCart)
@@ -14,13 +16,8 @@ const Navbar = () => {
       data-bs-theme="dark"
     >
       <div className="container-fluid">
-        <Link className="navbar-brand fw-bold fs-4" to ="/">
-          <img
-            src="hairlogo.PNG"
-            alt="Trendiz-Hair"
-            width="300"
-            height="40"
-          />
+        <Link className="navbar-brand fw-bold fs-4" to="/">
+          <img src="hairlogo.PNG" alt="Trendiz-Hair" width="300" height="40"/>
         </Link>
         <button
           className="navbar-toggler"
@@ -56,16 +53,13 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className="buttons">
-            <Link to="/login" className="btn btn-outline-light">
-              <AiOutlineLogin className="me-1" /> Login
-            </Link>
-            <Link to="/register" className="btn btn-outline-light ms-2">
-              <PiSignInBold className="me-1" /> Register
-            </Link>
-            <Link to ="/cart" className="btn btn-outline-light ms-2">
+          <div className="buttons">                    
+          <Login />               
+          <Register /> 
+            <Link to ="/cart" className="btn btn-outline-light mx-1">
               <BiSolidCart className="me-1" /> Cart ({state.length})
             </Link>
+                     
           </div>
         </div>
       </div>
