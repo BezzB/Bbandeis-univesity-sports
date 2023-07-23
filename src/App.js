@@ -8,9 +8,6 @@ import Cart from "./component/Cart";
 import Checkout from "./component/Checkout";
 import { ToastContainer } from "react-toastify";
 
-
-
-
 function App() {
   return (
     <>
