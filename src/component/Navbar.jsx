@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import { BiSolidCart } from "react-icons/bi";
-import {NavLink } from "react-router-dom";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { NavLink } from "react-router-dom";
 import Login from "./buttons/Login";
-import Register from "./buttons/Register";
-import "./Navbar.css"
+import "./Navbar.css";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-
 const Navbar = () => {
-  const cartState = useSelector((cartState) => cartState.handleCart);
   const [show, setShow] = useState(true);
 
   const toggleNavbar = () => {
     setShow(!show);
   };
 
- 
   return (
     <>
       <nav
@@ -25,14 +19,11 @@ const Navbar = () => {
       >
         <div className="container">
           <NavLink className="navbar-brand text-info" to="/">
-            <img src="hairlogo.PNG" alt="Trendiz-Hair" width="300" height="40" />
+            <img src="logonew.PNG" alt="Brandies Sports" width="300" height="40" />
           </NavLink>
-          <button
-            className="navbar-toggler border border-info text-info"
-            onClick={toggleNavbar}>
-              
-              {show ?  <AiOutlineMenu /> : <AiOutlineClose />}
-            </button>
+          <button className="navbar-toggler border border-info text-info" onClick={toggleNavbar}>
+            {show ? <AiOutlineMenu /> : <AiOutlineClose />}
+          </button>
           <div className={show ? "collapse navbar-collapse" : "collapse navbar-collapse active"}>
             <ul className="navbar-nav ms-auto mb-3 mb-lg-0">
               <li className="nav-item">
@@ -41,7 +32,12 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/products" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/products" onClick={toggleNavbar}>               
+                  Sports
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" activeClassName="active" to="/products" onClick={toggleNavbar}>
                   Facilities
                 </NavLink>
               </li>
@@ -66,21 +62,16 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
-                  Contact Us 
+                <NavLink className="nav-link" activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  Contact Us
                 </NavLink>
               </li>
             </ul>
             <div className="container-buttons">
               <div className="buttons">
-              <Login />
-              <Register />
-              <NavLink to="/cart" className="btn btn-outline-light mx-1">
-                <BiSolidCart className="me-1" /> Cart ({cartState.length})
-              </NavLink>
+                <Login />
+              </div>
             </div>
-            </div>
-            
           </div>
         </div>
       </nav>
