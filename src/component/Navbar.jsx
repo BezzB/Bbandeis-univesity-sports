@@ -33,7 +33,7 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-3 mb-lg-0">
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" aria-current="page" to="/" onClick={toggleNavbar}>
-                  Home
+                  Sports
                 </NavLink>
               </li>
               <li className="nav-item">
