@@ -1,6 +1,6 @@
 import React from 'react'
-import { Products } from './Products';
 import {MyCarousel} from './MyCarousel'
+import Homepage from "./Homepage"
 
 export const Home = () => {
   return (
@@ -17,8 +17,9 @@ export const Home = () => {
             </div>
         
         </div>
-      </div>      
-      <Products />
+        
+      </div>    
+    <Homepage />
     </div>
   );
 };

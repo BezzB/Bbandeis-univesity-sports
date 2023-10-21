@@ -25,12 +25,7 @@ const Navbar = () => {
             {show ? <AiOutlineMenu /> : <AiOutlineClose />}
           </button>
           <div className={show ? "collapse navbar-collapse" : "collapse navbar-collapse active"}>
-            <ul className="navbar-nav ms-auto mb-3 mb-lg-0">
-              <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" aria-current="page" to="/" onClick={toggleNavbar}>
-                  Home Page
-                </NavLink>
-              </li>
+            <ul className="navbar-nav ms-auto mb-3 mb-lg-0">              
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" to="/products" onClick={toggleNavbar}>               
                   Sports
