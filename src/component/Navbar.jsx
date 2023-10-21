@@ -37,22 +37,37 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-3 mb-lg-0">
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" aria-current="page" to="/" onClick={toggleNavbar}>
-                  Home
+                  Home Page
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" to="/products" onClick={toggleNavbar}>
-                  Products
+                  Facilities
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" to="/about" onClick={toggleNavbar}>
-                  About
+                  Programs 
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
-                  Contact
+                  Events 
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  Membership 
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  About Us 
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  Contact Us 
                 </NavLink>
               </li>
             </ul>
