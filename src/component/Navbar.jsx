@@ -27,7 +27,12 @@ const Navbar = () => {
           <div className={show ? "collapse navbar-collapse" : "collapse navbar-collapse active"}>
             <ul className="navbar-nav ms-auto mb-3 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" aria-current="page" to="/" onClick={toggleNavbar}>
+                  Home Page
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link"  activeClassName="active" to="/products" onClick={toggleNavbar}>               
                   Sports
                 </NavLink>
               </li>
@@ -37,23 +42,23 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/programs" onClick={toggleNavbar}>
-                  Programs
+                <NavLink className="nav-link"  activeClassName="active" to="/about" onClick={toggleNavbar}>
+                  Programs 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/events" onClick={toggleNavbar}>
-                  Events
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  Events 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/membership" onClick={toggleNavbar}>
-                  Membership
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  Membership 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/about" onClick={toggleNavbar}>
-                  About Us
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  About Us 
                 </NavLink>
               </li>
               <li className="nav-item">
