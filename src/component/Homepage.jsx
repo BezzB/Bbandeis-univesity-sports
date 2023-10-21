@@ -20,7 +20,23 @@ function Homepage() {
             </div>
           </div>
         </div>
-      </section>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h1>Join the Women Basketball Team </h1>
+              <p>The women basktball team has had a history of producing some of the best Basketballers in the region</p>
+              <button className="btn btn-primary">SignUp Today</button>
+            </div>
+            <div className="col-md-6">
+              <img
+                src="bball.jpg"
+                alt="Sports Complex"
+                className="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+        </section>
 
       <section className="facilities">
         {/* Facilities Section Content */}
