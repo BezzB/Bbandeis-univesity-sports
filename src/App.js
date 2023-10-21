@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./component/Navbar";
 import { Home } from "./component/Home";
 import { ToastContainer } from "react-toastify";
+import { Footer } from "./component/Footer"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -14,7 +15,7 @@ function App() {
       <Routes>        
         <Route path="/" element={<Home />} />                               
       </Routes>
-   
+      <Footer />   
     </>
   );
 }
