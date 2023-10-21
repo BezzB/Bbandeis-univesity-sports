@@ -8,10 +8,10 @@ export const MyCarousel = () => {
           <img src="imageone.jpeg" className="d-block w-100" alt="football" />
         </div>
         <div className="carousel-item" data-bs-interval="2000">
-          <img src="image4.jpg" className="d-block w-100" alt="gils footbal" />
+          <img src="image4.jpg" className="d-block w-100" alt="girls football" />
         </div>
         <div className="carousel-item">
-          <img src="image5.jpg" className="d-block w-100" alt="unityclub" />
+          <img src="image5.jpg" className="d-block w-100" alt="unity club" />
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -25,5 +25,3 @@ export const MyCarousel = () => {
     </div>
   );
 };
-
-

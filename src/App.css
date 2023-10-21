@@ -65,7 +65,7 @@ background-color: #b5f10ed3;
   }
 
   .col-md-6 {
-    width: 100%;
+    width: 80%;
   }
 
   .img {
@@ -82,13 +82,13 @@ background-color: #b5f10ed3;
   }
   .navbar-brand {
     display: block;
-    text-align: center;
+    text-align: left;
   }
 
   .navbar-brand img {
     width: 80%; /* Adjust the image width as per your design */
     height: auto;
-    max-width: 200px; /* Limit the maximum width of the image */
+    /* max-width: 200px; Limit the maximum width of the image */
     margin: 0 auto; /* Center the image horizontally */
   }
 
