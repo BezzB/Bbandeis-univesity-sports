@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import { BiSolidCart } from "react-icons/bi";
 import {NavLink } from "react-router-dom";
-import { useSelector } from "react-redux/es/hooks/useSelector";
 import Login from "./buttons/Login";
-import Register from "./buttons/Register";
 import "./Navbar.css"
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 
-const Navbar = () => {
-  const cartState = useSelector((cartState) => cartState.handleCart);
+const Navbar = () => { 
   const [show, setShow] = useState(true);
 
   const toggleNavbar = () => {
@@ -46,22 +42,22 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/about" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/programs" onClick={toggleNavbar}>
                   Programs 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/events" onClick={toggleNavbar}>
                   Events 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/membership" onClick={toggleNavbar}>
                   Membership
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/about" onClick={toggleNavbar}>
                   About Us 
                 </NavLink>
               </li>
@@ -73,8 +69,7 @@ const Navbar = () => {
             </ul>
             <div className="container-buttons">
               <div className="buttons">
-              <Login />
-              <Register />
+              <Login />           
              
             </div>
             </div>
