@@ -25,7 +25,7 @@ const Navbar = () => {
       >
         <div className="container">
           <NavLink className="navbar-brand text-info" to="/">
-            <img src="hairlogo.PNG" alt="Trendiz-Hair" width="300" height="40" />
+            <img src="logonew.PNG" alt="Brandies Sports" width="300" height="40" />
           </NavLink>
           <button
             className="navbar-toggler border border-info text-info"
@@ -42,17 +42,32 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" to="/products" onClick={toggleNavbar}>
-                  Products
+                  Facilities 
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" to="/about" onClick={toggleNavbar}>
-                  About
+                  Programs 
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
-                  Contact
+                  Events 
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  Membership
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  About Us 
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                  Contact Us
                 </NavLink>
               </li>
             </ul>
@@ -60,9 +75,7 @@ const Navbar = () => {
               <div className="buttons">
               <Login />
               <Register />
-              <NavLink to="/cart" className="btn btn-outline-light mx-1">
-                <BiSolidCart className="me-1" /> Cart ({cartState.length})
-              </NavLink>
+             
             </div>
             </div>
             
