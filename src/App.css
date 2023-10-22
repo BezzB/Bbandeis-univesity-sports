@@ -22,16 +22,16 @@ background-color: #b5f10ed3;
 
 .hero {
   background-color: #fff;
-  height: 250vh;
+  /* height: 150vh; */
 }
 
-/* .card {
+.card {
   text-align: left;
   border: none;
   background-color: #fff;
   padding: 0px;
   margin-bottom: 20px;
-} */
+} 
 
 .card-img {
   max-height: 100%;

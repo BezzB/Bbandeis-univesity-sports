@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Login from "./buttons/Login";
 import "./Navbar.css";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
@@ -27,44 +26,43 @@ const Navbar = () => {
           <div className={show ? "collapse navbar-collapse" : "collapse navbar-collapse active"}>
             <ul className="navbar-nav ms-auto mb-3 mb-lg-0">              
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/products" onClick={toggleNavbar}>               
+                <NavLink className="nav-link"  activeClassName="active" to="/" onClick={toggleNavbar}>               
                   Sports
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/products" onClick={toggleNavbar}>
+                <NavLink className="nav-link" activeClassName="active" to="/facilities" onClick={toggleNavbar}>
                   Facilities
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/about" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/programs" onClick={toggleNavbar}>
                   Programs 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/events" onClick={toggleNavbar}>
                   Events 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/membership" onClick={toggleNavbar}>
                   Membership 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link"  activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                <NavLink className="nav-link"  activeClassName="active" to="/aboutus" onClick={toggleNavbar}>
                   About Us 
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/contact" onClick={toggleNavbar}>
+                <NavLink className="nav-link" activeClassName="active" to="/contactus" onClick={toggleNavbar}>
                   Contact Us
                 </NavLink>
               </li>
             </ul>
             <div className="container-buttons">
-              <div className="buttons">
-                <Login />
+              <div className="buttons">               
               </div>
             </div>
           </div>
